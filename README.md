@@ -16,7 +16,7 @@ The original model used the 'Relu' activation function at epochs of 100.  Below 
 
 For better optimization to achieve an accuracy score of 75% or more, additional 3 models have been trained.
 
-#### Attempt 1
+### Attempt 1
 
 **Data Processing** - *preprocessing of data was the same as original model*
 * Columns "EIN" and "NAME" were dropped as they were not beneficial for a target or feature variables.
@@ -33,7 +33,7 @@ For better optimization to achieve an accuracy score of 75% or more, additional 
 
 * An additional 3rd layer was introduced with 10 neurons and activation functions of "Relu" for all hidden layers.  Original layer performed closer to 73%, therefore the same model structure as original was tested but with an additional layer increasing the parameters to see if that increases the model accuracy.  Unfortunately no significant difference was acheived implying that additional layers are not always necessary.
 
-#### Attempt 2
+### Attempt 2
 
 **Data Processing** 
 * Columns "EIN", "NAME" and "APPLICATION_TYPE were dropped as they were not beneficial for a target or feature variables. 
@@ -51,7 +51,7 @@ For better optimization to achieve an accuracy score of 75% or more, additional 
 * In order to optimize better, an additional column was categorized as noisy variable since I couldn't find significance to the output and therefore removed, which then left 35 features.  Since the original model's accuracy was similar to Attempt 1, I reverted back to keeping only 2 hidden layers.  However the number of neurons were reduced following the rule of thumb; "2-3 times more than features".   Changing the activation fuction was to try and capture any negative values as well.
 * As per the accuracy score, it is safe to assume that dropping the additional column for this model negatively impacted to a lower accuracy, returning less trainable data.  Proving the "APPLICATION_TYPE" data points are  significant and relevant for the prediction.  
 
-#### Attempt 3
+### Attempt 3
 
 **Data Processing** 
 * For this model - the data was preprocessed as the original.  Only dropping the "EIN" and "NAME" columns.  Also binning the "APPLICATION_TYPE" and "CLASSIFICATION" columns.
@@ -79,6 +79,7 @@ The script is saved as [AlphabetSoupCharity_Optimization_trial](https://github.c
 
 The best model consists of 4 layers with 71 neurons for the first layer with an epoch of 27 and using "Relu" activation function. <br>
 ![bestmodel](https://user-images.githubusercontent.com/75437852/117493260-c43c8380-af40-11eb-80be-2e6ce35fc47f.PNG)<br>
+
 Below is the model evaluation: <br>
 ![bestmodel_accuracy](https://user-images.githubusercontent.com/75437852/117493364-de766180-af40-11eb-9c7b-cb1f354d8cc6.PNG)<br>
 
